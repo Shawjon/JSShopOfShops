@@ -1,0 +1,29 @@
+﻿@model JSShopOfShops.Models.User
+@{
+    ViewBag.Title = "RegisterUser";
+}
+
+<h2>Register New User</h2>
+
+@using (Html.BeginForm())
+{
+    <br />
+    <div>
+        @Html.TextBoxFor(u => u.FirstName, new { @class = "form-control", placeholder = "First Name" })
+    </div>
+    <br />
+    <div>
+        @Html.TextBoxFor(u => u.LastName, new { @class = "form-control", placeholder = "Last Name" })
+    </div>
+    <br />
+    <div>
+        @Html.TextBoxFor(u => u.Email, new { @class = "form-control", placeholder = "Email" })
+    </div>
+    <br />
+    <div>
+        @Html.TextBoxFor(u => u.PhoneNumber, new { @class = "form-control", placeholder = "Phone Number" })
+    </div>
+    <br />
+    <button class="btn btn-success" type="submit">Register</button>
+
+}

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JSShopOfShops.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -33,9 +34,23 @@ namespace JSShopOfShops.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult registerUser()
+        public ActionResult RegisterUser()
         {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult RegisterUser(User user)
+        {
+            //do validation
 
+            //save info
+
+            //redirect
+            return View();
+        }
+        public ActionResult Summary(User user)
+        {
+            return View();
         }
     }
 }
