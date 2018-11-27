@@ -26,5 +26,16 @@ namespace JSShopOfShops.Controllers
 
             return View();
         }
+        public ActionResult Registration()
+        {
+            ViewBag.Message = "The Registration Page.";
+
+            return View();
+        }
+        [HttpGet]
+        public ActionResult registerUser()
+        {
+
+        }
     }
 }
