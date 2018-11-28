@@ -5,7 +5,22 @@
 
 <h2>Register New User</h2>
 
-@using (Html.BeginForm())
+<form method="post" action="/Home/Summary">
+    First Name <input type="text" placeholder="First Name" name="FirstName"  required />
+    <br />
+    Last Name <input type="text" placeholder="LastName" name="LastName" required />
+    <br />
+    Email <input type="email" placeholder="Email" name="Email" required />
+    <br />
+    Password <input type="password" placeholder="Password" name="Password" required />
+   
+
+    <input type="submit" class="btn-success" />
+
+</form>
+
+
+@*@using (Html.BeginForm())
 {
     <br />
     <div>
@@ -24,6 +39,6 @@
         @Html.TextBoxFor(u => u.PhoneNumber, new { @class = "form-control", placeholder = "Phone Number" })
     </div>
     <br />
-    <button class="btn btn-success" type="submit">Register</button>
+    <button class="btn btn-success" type="submit">Register</button>*@
 
 }

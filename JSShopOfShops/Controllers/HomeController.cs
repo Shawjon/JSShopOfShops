@@ -31,25 +31,24 @@ namespace JSShopOfShops.Controllers
         {
             ViewBag.Message = "The Registration Page.";
 
-            return View();
+            return View("RegisterUser");
         }
-        [HttpGet]
+   
         public ActionResult RegisterUser()
         {
-            return View();
-        }
-        [HttpPost]
-        public ActionResult RegisterUser(User user)
-        {
+            
+            
+
             //do validation
 
             //save info
-
+            
             //redirect
             return View();
         }
         public ActionResult Summary(User user)
         {
+            ViewBag.user = user;
             return View();
         }
     }
