@@ -3,6 +3,14 @@
     ViewBag.Title = "Summary";
 }
 
+@if (@ViewBag.ErrorMessage != null)
+{
+    <h2 class="text-danger">@ViewBag.ErrorMessage</h2>
+    <a href="/Home/Registration">Click here to start over</a>
 
-<h2>Hello @ViewBag.user.FirstName</h2>
+}
+else
+{
+    <h2>Hello @ViewBag.user.FirstName</h2>
+}
 

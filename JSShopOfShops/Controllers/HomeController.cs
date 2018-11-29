@@ -36,19 +36,27 @@ namespace JSShopOfShops.Controllers
    
         public ActionResult RegisterUser()
         {
-            
-            
 
-            //do validation
-
-            //save info
-            
-            //redirect
             return View();
         }
+
+        public ActionResult Summary()
+        {
+    
+            return View();
+        }
+        [HttpPost]
         public ActionResult Summary(User user)
         {
-            ViewBag.user = user;
+          if(user.Password != user.ConfirmPassword)
+          {
+                ViewBag.ErrorMessage = "Passwords do not match";
+          }
+          else
+          {
+                ViewBag.user = user;
+          }
+               
             return View();
         }
     }
