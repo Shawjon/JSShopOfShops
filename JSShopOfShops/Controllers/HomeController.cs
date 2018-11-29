@@ -48,18 +48,23 @@ namespace JSShopOfShops.Controllers
         [HttpPost]
         public ActionResult Summary(User user)
         {
-            if (ModelState.IsValid)
+            if ((user.Password != user.ConfirmPassword) && (user.Age < 1 || user.Age > 115))
             {
-                if (user.Password != user.ConfirmPassword)
-                {
-                    ViewBag.ErrorMessage = "Passwords do not match";
-                }
-                else
-                {
-                    ViewBag.user = user;
-                }
+                ViewBag.ErrorMessage = "Passwords do not match and Age is invalid";
             }
-            ViewBag.user = user;
+            else if (user.Password != user.ConfirmPassword)
+            {
+                ViewBag.ErrorMessage = "Passwords do not match";
+            }
+            else if (user.Age < 1 || user.Age >115)
+            {
+                ViewBag.ErrorMessage = "Age is invalid";
+            }
+            else
+            {
+                ViewBag.user = user;
+            }
+            
             return View(user);
         }
     }

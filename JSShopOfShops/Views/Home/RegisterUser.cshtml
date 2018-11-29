@@ -5,23 +5,21 @@
 
 <h2>Register New User</h2>
 
-<form method="post" action="/Home/Summary">
-    First Name <input type="text" placeholder="First Name" name="FirstName" required />
-    <br />
-    Last Name <input type="text" placeholder="LastName" name="LastName" required />
+<form id="test" method="post" action="/Home/Summary">
+    First Name <input type="text" placeholder="First Name" name="FirstName" required />  Last Name <input type="text" placeholder="LastName" name="LastName" required />
     <br />
     Age <input type="number" placeholder="Age" name="Age" required />
     <br />
     Email <input type="email" placeholder="Email" name="Email" required />
     <br />
     Password <input type="password" placeholder="Password" name="Password" required />
-    ConfirmPassword <input type="password" placeholder="Password" name="ConfirmPassword" required />
+    Confirm Password <input type="password" placeholder="Password" name="ConfirmPassword" required />
 
     <fieldset>
+        
+        Favorite Color <select id="MovieType" name="FavColor" required>
 
-        Favorite Color <select id="MovieType" name="FavColor">
-
-            <option selected="selected" value="0">Red</option>
+            <option  selected="selected" value="0">Red</option>
             <option value="1">Orange</option>
             <option value="2">Yellow</option>
             <option value="3">Green</option>
@@ -35,7 +33,7 @@
     <br />
     Keep in the loop with monthly mailer?<input checked="checked" id="NewsLetter" name="NewsLetter" type="checkbox" value="true" />
     <br />
-    <input type="submit" class="btn-success" />
+    <input type="submit" class="btn-warning" />
 </form>
 
 
